@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | M.Nekookar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* استایل‌های اختصاصی برای صفحه رزومه */
+        .resume-wrapper { max-width: 900px; margin: 120px auto 80px; padding: 0 20px; }
+        
+        .resume-header {
+            border-bottom: 1px solid var(--border-dim);
+            padding-bottom: 40px; margin-bottom: 40px;
+            display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;
+        }
+        
+        .resume-name h1 { font-size: 3rem; margin-bottom: 10px; line-height: 1; }
+        .resume-name p { color: var(--cyan); font-size: 1.1rem; font-weight: 500; letter-spacing: 1px; }
+        
+        .contact-info { display: flex; flex-direction: column; gap: 8px; text-align: right; }
+        .contact-item { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-family: var(--font-mono); transition: 0.3s; }
+        .contact-item:hover { color: white; }
+
+        .resume-section { margin-bottom: 50px; }
+        .section-title { 
+            font-size: 1.2rem; color: white; margin-bottom: 25px; 
+            display: flex; align-items: center; gap: 10px;
+        }
+        .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border-dim); }
+        .title-icon { color: var(--cyan); }
+
+        .job-item { 
+            border-left: 2px solid var(--border-dim); padding-left: 25px; position: relative; margin-bottom: 40px; 
+        }
+        .job-item::before {
+            content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; 
+            background: var(--bg-main); border: 2px solid var(--cyan); border-radius: 50%;
+        }
+        
+        .job-header { display: flex; justify-content: space-between; margin-bottom: 10px; flex-wrap: wrap; }
+        .job-role { font-size: 1.1rem; font-weight: 700; color: white; }
+        .job-company { color: var(--cyan); font-weight: 500; }
+        .job-date { font-family: var(--font-mono); font-size: 0.85rem; color: #555; }
+        
+        .job-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+        .job-desc ul { padding-left: 20px; margin-top: 10px; }
+        .job-desc li { margin-bottom: 5px; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .skill-box {
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border-dim);
+            padding: 15px; border-radius: 12px; text-align: center;
+        }
+        .skill-name { display: block; color: white; font-weight: 600; margin-bottom: 5px; }
+        .skill-level { font-size: 0.8rem; color: var(--text-muted); }
+
+        .btn-print {
+            background: var(--text-white); color: black; padding: 10px 24px; border-radius: 8px;
+            text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px;
+        }
+        .btn-print:hover { background: var(--cyan); }
+
+        @media (max-width: 768px) {
+            .resume-header { flex-direction: column; text-align: left; }
+            .contact-info { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-overlay"></div>
+
+    <nav class="navbar fade-in">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">M<span class="dot">.</span>Nekookar</a>
+            <div class="nav-menu">
+                <a href="index.html#work">Work</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#blog">Insights</a>
+            </div>
+            <a href="mailto:moh.nek@aut.ac.ir" class="btn-contact">Hire Me</a>
+        </div>
+    </nav>
+
+    <div class="resume-wrapper fade-in delay-1">
+        
+        <header class="resume-header">
+            <div class="resume-name">
+                <h1>Mohammad Nekookar</h1>
+                <p>Naval Architect & Marine Systems Designer</p>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:moh.nek@aut.ac.ir" class="contact-item">moh.nek@aut.ac.ir</a>
+                <span class="contact-item">+98 993 058 4087</span>
+                <span class="contact-item">Tehran, Iran</span>
+                <a href="https://linkedin.com/in/mohammadnekookar" class="contact-item">linkedin.com/in/mohammadnekookar</a>
+            </div>
+        </header>
+
+        <section class="resume-section">
+            <div class="section-title"><span class="title-icon">⚡</span> Professional Experience</div>
+            
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-role">Plan Approval Engineer</div>
+                        <div class="job-company">Royal Classification Society (RCS)</div>
+                    </div>
+                    <div class="job-date">Aug 2025 - Oct 2025</div>
+                </div>
+                <div class="job-desc">
+                    <ul>
+                        <li>Conducting plan approval processes for marine structures.</li>
+                        <li>Completed specialized courses in inspection and design verification.</li>
+                        <li>Ensuring compliance with international maritime regulations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-role">Marine Engineering Intern</div>
+                        <div class="job-company">ISOICO (Iran Shipbuilding & Offshore Industries)</div>
+                    </div>
+                    <div class="job-date">July 2025 - Aug 2025</div>
+                </div>
+                <div class="job-desc">
+                    <p>Rotational internship across Planning, Engineering Design, and QC departments.</p>
+                    <ul>
+                        <li>Gained hands-on experience in a large-scale marine industrial environment.</li>
+                        <li>Assisted in documentation and quality control processes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <div class="section-title"><span class="title-icon">⚓</span> Key Projects</div>
+            
+            <div class="job-item">
+                <div class="job-header">
+                    <div class="job-role">Autonomous Trimaran Vessel Design</div>
+                    <div class="job-date">2025</div>
+                </div>
+                <div class="job-desc">
+                    <p>Engineered the hull and outriggers using <strong>CATIA V5</strong>. Validated hydrodynamic stability and structural integrity via <strong>Ansys</strong> simulations.</p>
+                </div>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <div class="job-role">Autonomous Surface Vehicle (ASV) Prototype</div>
+                    <div class="job-date">2023</div>
+                </div>
+                <div class="job-desc">
+                    <p>Lead Structural Designer for a 1:20 scale prototype.</p>
+                    <ul>
+                        <li>Optimized hull design reducing weight by 15% via topology optimization.</li>
+                        <li>Integrated Python-based control logic for navigation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <div class="section-title"><span class="title-icon">🎓</span> Education</div>
+            <div class="job-item" style="border: none;">
+                <div class="job-header">
+                    <div>
+                        <div class="job-role">B.Sc. in Marine Engineering</div>
+                        <div class="job-company">Amirkabir University of Technology (Tehran Polytechnic)</div>
+                    </div>
+                    <div class="job-date">2022 - Present</div>
+                </div>
+                <div class="job-desc">
+                    <p>Top 10% of Cohort. Active Teaching Assistant for Dynamics and Physics courses.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <div class="section-title"><span class="title-icon">🛠</span> Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <span class="skill-name">CATIA V5</span>
+                    <span class="skill-level">Advanced (300+ hrs)</span>
+                </div>
+                <div class="skill-box">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-level">Automation & Data</span>
+                </div>
+                <div class="skill-box">
+                    <span class="skill-name">Ansys (CFX)</span>
+                    <span class="skill-level">Simulation</span>
+                </div>
+                <div class="skill-box">
+                    <span class="skill-name">AutoCAD</span>
+                    <span class="skill-level">2D Drafting</span>
+                </div>
+                <div class="skill-box">
+                    <span class="skill-name">LaTeX</span>
+                    <span class="skill-level">Documentation</span>
+                </div>
+            </div>
+        </section>
+        
+        <div style="text-align: center;">
+            <a href="assets/resume.pdf" class="btn-print" download>Download PDF Version</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 M.Nekookar. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

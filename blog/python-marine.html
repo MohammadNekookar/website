@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python vs Excel in Marine Engineering | M.Nekookar</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* استایل اختصاصی برای خوانایی مقاله */
+        .article-wrapper { max-width: 700px; margin: 120px auto 100px; padding: 0 20px; }
+        .article-header { margin-bottom: 50px; border-bottom: 1px solid var(--border-dim); padding-bottom: 30px; }
+        .article-meta { color: var(--cyan); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 15px; display: block; }
+        .article-title { font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px; color: white; }
+        
+        .article-body { color: #ccc; font-size: 1.1rem; line-height: 1.8; }
+        .article-body h2 { color: white; margin-top: 40px; margin-bottom: 15px; font-size: 1.5rem; }
+        .article-body p { margin-bottom: 20px; }
+        
+        /* استایل نمایش کد */
+        pre { background: #111; padding: 20px; border-radius: 10px; border: 1px solid #333; overflow-x: auto; margin: 20px 0; }
+        code { font-family: 'JetBrains Mono', monospace; color: #a5b4fc; font-size: 0.9rem; }
+        
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; }
+        .back-link:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="grid-overlay"></div>
+    
+    <nav class="navbar fade-in">
+        <div class="nav-inner">
+            <a href="../index.html" class="brand">M<span class="dot">.</span>Nekookar</a>
+            <div class="nav-menu">
+                <a href="../projects.html">Work</a>
+                <a href="../index.html#expertise">Expertise</a>
+                <a href="../blog.html">Insights</a>
+            </div>
+            <a href="mailto:moh.nek@aut.ac.ir" class="btn-contact">Let's Talk</a>
+        </div>
+    </nav>
+
+    <article class="article-wrapper fade-in delay-1">
+        <a href="../blog.html" class="back-link">&larr; Back to Archive</a>
+        
+        <header class="article-header">
+            <span class="article-meta">Feb 28, 2026 • Engineering • 5 min read</span>
+            <h1 class="article-title">Why Python is Taking Over Marine Engineering</h1>
+        </header>
+
+        <div class="article-body">
+            <p>For decades, Excel has been the bread and butter of naval architects. We use it for weight estimation, hydrostatic calculations, and cost analysis. But as ship designs become more complex, Excel sheets become fragile, slow, and prone to human error.</p>
+            
+            <h2>The Problem with "Legacy" Sheets</h2>
+            <p>Every shipyard has that one Excel file. It was created 10 years ago by a senior engineer who retired, and now nobody dares to touch the macros. This is not engineering; this is archaeology.</p>
+
+            <h2>Enter Python</h2>
+            <p>Python allows us to automate these calculations with readable, version-controlled code. Instead of manual cell referencing, we define logical functions.</p>
+
+            <p>Here is a simple example of calculating displacement using Python vs Excel logic:</p>
+
+<pre><code>def calculate_displacement(LWL, BWL, Draft, Cb, seawater_density=1.025):
+    """
+    Calculate ship displacement in tonnes.
+    """
+    volume = LWL * BWL * Draft * Cb
+    displacement = volume * seawater_density
+    return displacement
+
+# Usage
+ship_disp = calculate_displacement(200, 32, 10, 0.65)
+print(f"Displacement: {ship_disp} tonnes")</code></pre>
+
+            <h2>Libraries that Changed the Game</h2>
+            <p>In my recent projects, I've replaced traditional tools with:</p>
+            <ul>
+                <li><strong>NumPy:</strong> For matrix operations in structural analysis.</li>
+                <li><strong>Pandas:</strong> For handling large datasets of tank soundings.</li>
+                <li><strong>Matplotlib:</strong> For generating hydrostatic curves automatically.</li>
+            </ul>
+
+            <p>The transition isn't just about speed; it's about reliability. Code can be tested, reviewed, and automated.</p>
+        </div>
+    </article>
+
+    <footer>
+        <p style="text-align: center; color: #666;">© 2026 M.Nekookar. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

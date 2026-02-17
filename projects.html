@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | M.Nekookar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* استایل اختصاصی برای صفحه پروژه‌ها */
+        .projects-wrapper { max-width: 1000px; margin: 120px auto 80px; padding: 0 20px; }
+        
+        .page-header { text-align: center; margin-bottom: 80px; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 15px; }
+        .page-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-dim);
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 60px;
+            transition: 0.4s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .project-card:hover {
+            border-color: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .project-content { padding: 40px; }
+        
+        .project-meta {
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+            flex-wrap: wrap; gap: 10px;
+        }
+        .project-year { 
+            font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan); 
+            background: rgba(0, 240, 255, 0.1); padding: 4px 10px; border-radius: 6px;
+        }
+        .project-role { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+
+        .project-title { font-size: 2rem; margin-bottom: 15px; color: white; }
+        .project-desc { color: var(--text-muted); line-height: 1.7; margin-bottom: 30px; }
+
+        .specs-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px; margin-bottom: 30px; background: rgba(0,0,0,0.2); padding: 20px; border-radius: 12px;
+        }
+        .spec-item h5 { color: white; font-size: 0.9rem; margin-bottom: 5px; }
+        .spec-item span { color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); }
+
+        .tech-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+        .tech-tags span {
+            font-size: 0.8rem; border: 1px solid var(--border-dim); padding: 6px 12px; border-radius: 50px; color: #fff;
+        }
+
+        /* بخش چالش‌ها */
+        .challenges-box {
+            border-top: 1px solid var(--border-dim);
+            padding-top: 20px; margin-top: 20px;
+        }
+        .challenges-box h4 { font-size: 1rem; color: var(--green); margin-bottom: 10px; }
+        .challenges-box ul { padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; }
+        .challenges-box li { margin-bottom: 8px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-overlay"></div>
+    <div class="ambient-light light-cyan" style="top: 20%; left: -10%;"></div>
+
+    <nav class="navbar fade-in">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">M<span class="dot">.</span>Nekookar</a>
+            <div class="nav-menu">
+                <a href="index.html#work">Work</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#blog">Insights</a>
+            </div>
+            <a href="mailto:moh.nek@aut.ac.ir" class="btn-contact">Hire Me</a>
+        </div>
+    </nav>
+
+    <div class="projects-wrapper fade-in delay-1">
+        
+        <header class="page-header">
+            <h1>Selected Works</h1>
+            <p>A showcase of marine engineering, prototyping, and design automation.</p>
+        </header>
+
+        <article class="project-card">
+            <div class="project-content">
+                <div class="project-meta">
+                    <span class="project-year">2023 - Prototype</span>
+                    <span class="project-role">Team Lead & Hull Designer</span>
+                </div>
+                <h2 class="project-title">Autonomous Surface Vehicle (ASV)</h2>
+                <p class="project-desc">
+                    Developed a 1:20 scale autonomous surface vehicle prototype for environmental monitoring in coastal waters. 
+                    Optimized the catamaran hull configuration  and integrated a Python-based navigation system.
+                </p>
+
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h5>Length</h5>
+                        <span>117 cm</span>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Power</h5>
+                        <span>LiPo Battery (12V)</span>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Sensors</h5>
+                        <span>GPS, IMU, Ultrasonic</span>
+                    </div>
+                    <div class="spec-item">
+                        <h5>Control</h5>
+                        <span>Raspberry Pi / Python</span>
+                    </div>
+                </div>
+
+                <div class="challenges-box">
+                    <h4>Key Engineering Challenges Solved:</h4>
+                    <ul>
+                        <li><strong>Waterproofing:</strong> Designed silicone-sealed compartments for electronics.</li>
+                        <li><strong>Stability:</strong> Analyzed hull performance for wave heights ≤ 0.5m.</li>
+                        <li><strong>Navigation:</strong> Implemented PID control logic for course keeping.</li>
+                    </ul>
+                </div>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>3D Printing</span>
+                    <span>Robotics</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-content">
+                <div class="project-meta">
+                    <span class="project-year">2025 - Design</span>
+                    <span class="project-role">Design Engineer</span>
+                </div>
+                <h2 class="project-title">Autonomous Trimaran Vessel</h2>
+                <p class="project-desc">
+                    A comprehensive design project focused on hydrodynamics and structural integrity. 
+                    Engineered the main hull and outriggers to ensure maximum stability at high speeds.
+                </p>
+
+                <div class="challenges-box">
+                    <h4>Technical Achievements:</h4>
+                    <ul>
+                        <li><strong>Modeling:</strong> Full parametric modeling in CATIA V5.</li>
+                        <li><strong>Simulation:</strong> Validated structural loads and hydrodynamic resistance using Ansys (CFX/AQWA).</li>
+                        <li><strong>Optimization:</strong> Reduced drag coefficient through iterative hull form refinement.</li>
+                    </ul>
+                </div>
+
+                <div class="tech-tags">
+                    <span>CATIA V5</span>
+                    <span>Ansys</span>
+                    <span>Hydrodynamics</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-content">
+                <div class="project-meta">
+                    <span class="project-year">2026 - Research</span>
+                    <span class="project-role">Research Assistant</span>
+                </div>
+                <h2 class="project-title">Laser Welding Infrastructure in Shipyards</h2>
+                <p class="project-desc">
+                    Investigating the infrastructural requirements for implementing laser welding technology in marine industries.
+                    Focusing on energy consumption, precision, and cost-benefit analysis compared to traditional SMAW methods.
+                </p>
+
+                <div class="tech-tags">
+                    <span>Research</span>
+                    <span>Manufacturing</span>
+                    <span>Advanced Materials</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <footer>
+        <p>© 2026 M.Nekookar. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
